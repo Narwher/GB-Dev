@@ -4,7 +4,7 @@ Thanks to [GBDK](http://gbdk.sourceforge.net/), software can be written for the 
 
 ## Why make software on the Game Boy..?
 
-I've always been fascinated with the high output of quality games on Nintendo's 1989 handheld. With such underpowered hardware specs, it's remarkable how much talented developers could squeeze out of the restraints. When it comes to creating art of any medium, I enjoy working with limitations. It forces you to think differently and seek unique approaches as to how to get desired results, pushing your wits as well as the given resources to their limit. This concept is the core of all innovation.
+I've always been fascinated with the high output of quality games on Nintendo's 1989 handheld. With such underpowered hardware specs, it's remarkable how much talented developers could squeeze out of the restraints. When it comes to creating art of any medium, I enjoy working with limitations. It forces you to think differently and seek unique approaches as to how to get desired results, pushing your wits as well as the given resources to their limit. This concept is the basis of all innovation.
 
 Plus, I just like the Game Boy. It's cumbersome yet built like a tank; homely to the eye with its blurry pea-green screen yet oddly stylish. And you gotta love that stereo™ chiptune music!
 
