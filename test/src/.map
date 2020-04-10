@@ -292,10 +292,10 @@ AREA _SFR
 MODULES
 	FILE C:\gbdk\lib/small/asxxxx/gb/crt0.o
 		NAME Runtime
-	FILE main.o
-		NAME lcc70680
-	FILE bank1.o
-		NAME lcc136360
+	FILE ..\build\main.o
+		NAME lcc112560
+	FILE ..\build\bank1.o
+		NAME lcc110840
 LIBRARIES
 	LIBRARY C:\gbdk\lib/small/asxxxx/gb/gb.lib
 		MODULE sfr.o
