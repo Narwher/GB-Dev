@@ -24,7 +24,7 @@ These will be kept track of in the [projects section](https://github.com/Narwher
 First, the [GBDK](http://gbdk.sourceforge.net/) must be downloaded and installed to the host system. Within the **(Project Name)/src** folder is a **build.bat** script that compiles the source into a .gb file (the most common extension for Game Boy binaries). 
 
 ## How to play
-Game Boy binary files can be played on actual hardware via aftermarked flash memory cartridges. Simply copy the .gb file to an microSD card --> Flash cartridge, select the file and play! 
+Game Boy binary files can be played on actual hardware via aftermarket flash memory cartridges. Simply copy the .gb file to an microSD card --> Flash cartridge, select the file and play! 
 
 .gb files can also be played on many platforms via emulation software (one of which is provided in the **emulation** folder. The Game Boy is emulated almost perfectly on just about every platform that runs software! This allows for a wide user-base and portability for your software. It's a simple as running the emulator, selecting the .gb file via the file menu, and you're done.
 
