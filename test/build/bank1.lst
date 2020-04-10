@@ -1,0 +1,236 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : FreeWare ANSI-C Compiler
+                              3 ; Version 2.2.1 Thu Apr 09 20:40:11 2020
+                              4 
+                              5 ;--------------------------------------------------------
+                              6 	.module lcc136360
+                              7 	
+                              8 ;--------------------------------------------------------
+                              9 ; Public variables in this module
+                             10 ;--------------------------------------------------------
+                             11 	.globl _update
+                             12 	.globl _wait_vbl_done
+                             13 	.globl _update
+                             14 ;--------------------------------------------------------
+                             15 ; Externals used
+                             16 ;--------------------------------------------------------
+                             17 	.globl _collisionCheck
+                             18 	.globl _updateSwitches
+                             19 	.globl _checkInput
+                             20 	.globl _IE_REG
+                             21 	.globl _SVBK_REG
+                             22 	.globl _OCPD_REG
+                             23 	.globl _OCPS_REG
+                             24 	.globl _BCPD_REG
+                             25 	.globl _BCPS_REG
+                             26 	.globl _RP_REG
+                             27 	.globl _HDMA5_REG
+                             28 	.globl _HDMA4_REG
+                             29 	.globl _HDMA3_REG
+                             30 	.globl _HDMA2_REG
+                             31 	.globl _HDMA1_REG
+                             32 	.globl _VBK_REG
+                             33 	.globl _KEY1_REG
+                             34 	.globl _WX_REG
+                             35 	.globl _WY_REG
+                             36 	.globl _OBP1_REG
+                             37 	.globl _OBP0_REG
+                             38 	.globl _BGP_REG
+                             39 	.globl _DMA_REG
+                             40 	.globl _LYC_REG
+                             41 	.globl _LY_REG
+                             42 	.globl _SCX_REG
+                             43 	.globl _SCY_REG
+                             44 	.globl _STAT_REG
+                             45 	.globl _LCDC_REG
+                             46 	.globl _NR52_REG
+                             47 	.globl _NR51_REG
+                             48 	.globl _NR50_REG
+                             49 	.globl _NR44_REG
+                             50 	.globl _NR43_REG
+                             51 	.globl _NR42_REG
+                             52 	.globl _NR41_REG
+                             53 	.globl _NR34_REG
+                             54 	.globl _NR33_REG
+                             55 	.globl _NR32_REG
+                             56 	.globl _NR31_REG
+                             57 	.globl _NR30_REG
+                             58 	.globl _NR24_REG
+                             59 	.globl _NR23_REG
+                             60 	.globl _NR22_REG
+                             61 	.globl _NR21_REG
+                             62 	.globl _NR14_REG
+                             63 	.globl _NR13_REG
+                             64 	.globl _NR12_REG
+                             65 	.globl _NR11_REG
+                             66 	.globl _NR10_REG
+                             67 	.globl _IF_REG
+                             68 	.globl _TAC_REG
+                             69 	.globl _TMA_REG
+                             70 	.globl _TIMA_REG
+                             71 	.globl _DIV_REG
+                             72 	.globl _SC_REG
+                             73 	.globl _SB_REG
+                             74 	.globl _P1_REG
+                             75 	.globl __io_out
+                             76 	.globl __io_in
+                             77 	.globl __io_status
+                             78 	.globl _sys_time
+                             79 	.globl __cpu
+                             80 ;--------------------------------------------------------
+                             81 ; special function registers
+                             82 ;--------------------------------------------------------
+                             83 ;--------------------------------------------------------
+                             84 ; special function bits 
+                             85 ;--------------------------------------------------------
+                             86 ;--------------------------------------------------------
+                             87 ; internal ram data
+                             88 ;--------------------------------------------------------
+                             89 	.area _DATA_1
+                             90 ;--------------------------------------------------------
+                             91 ; overlayable items in internal ram 
+                             92 ;--------------------------------------------------------
+                             93 	.area _OVERLAY
+                             94 ;--------------------------------------------------------
+                             95 ; indirectly addressable internal ram data
+                             96 ;--------------------------------------------------------
+                             97 	.area _ISEG
+                             98 ;--------------------------------------------------------
+                             99 ; bit data
+                            100 ;--------------------------------------------------------
+                            101 	.area _BSEG
+                            102 ;--------------------------------------------------------
+                            103 ; external ram data
+                            104 ;--------------------------------------------------------
+                            105 	.area _XSEG
+                            106 ;--------------------------------------------------------
+                            107 ; global & static initialisations
+                            108 ;--------------------------------------------------------
+                            109 	.area _GSINIT
+                            110 	.area _GSFINAL
+                            111 	.area _GSINIT
+                            112 ;--------------------------------------------------------
+                            113 ; Home
+                            114 ;--------------------------------------------------------
+                            115 	.area _HOME
+                            116 	.area _CODE_1
+                            117 ;--------------------------------------------------------
+                            118 ; code
+                            119 ;--------------------------------------------------------
+                            120 	.area _CODE_1
+                            121 ;	bank1.c 8
+                            122 ; genLabel
+                            123 ; genFunction
+                            124 ;	---------------------------------
+                            125 ; Function update
+                            126 ; ---------------------------------
+   0000                     127 ___update_start:
+   0000                     128 _update:
+                            129 	
+                            130 ;	bank1.c 10
+                            131 ; genLabel
+   0000                     132 00102$:
+                            133 ;	bank1.c 12
+                            134 ; genCall
+   0000 CD 00 00            135 	call	_checkInput
+                            136 ;	bank1.c 13
+                            137 ; genCall
+   0003 CD 00 00            138 	call	_updateSwitches
+                            139 ;	bank1.c 14
+                            140 ; genCall
+   0006 CD 00 00            141 	call	_wait_vbl_done
+                            142 ; genGoto
+   0009 C3 00 00            143 	jp	00102$
+                            144 ; genLabel
+   000C                     145 00104$:
+                            146 ; genEndFunction
+                            147 	
+   000C C9                  148 	ret
+   000D                     149 ___update_end:
+                            150 	.area _CODE_1
+ASxxxx Assembler V01.75  (GameBoy Z80-like CPU), page 1.
+
+Symbol Table
+
+    _BCPD_REG                          **** GX
+    _BCPS_REG                          **** GX
+    _BGP_REG                           **** GX
+    _DIV_REG                           **** GX
+    _DMA_REG                           **** GX
+    _HDMA1_REG                         **** GX
+    _HDMA2_REG                         **** GX
+    _HDMA3_REG                         **** GX
+    _HDMA4_REG                         **** GX
+    _HDMA5_REG                         **** GX
+    _IE_REG                            **** GX
+    _IF_REG                            **** GX
+    _KEY1_REG                          **** GX
+    _LCDC_REG                          **** GX
+    _LYC_REG                           **** GX
+    _LY_REG                            **** GX
+    _NR10_REG                          **** GX
+    _NR11_REG                          **** GX
+    _NR12_REG                          **** GX
+    _NR13_REG                          **** GX
+    _NR14_REG                          **** GX
+    _NR21_REG                          **** GX
+    _NR22_REG                          **** GX
+    _NR23_REG                          **** GX
+    _NR24_REG                          **** GX
+    _NR30_REG                          **** GX
+    _NR31_REG                          **** GX
+    _NR32_REG                          **** GX
+    _NR33_REG                          **** GX
+    _NR34_REG                          **** GX
+    _NR41_REG                          **** GX
+    _NR42_REG                          **** GX
+    _NR43_REG                          **** GX
+    _NR44_REG                          **** GX
+    _NR50_REG                          **** GX
+    _NR51_REG                          **** GX
+    _NR52_REG                          **** GX
+    _OBP0_REG                          **** GX
+    _OBP1_REG                          **** GX
+    _OCPD_REG                          **** GX
+    _OCPS_REG                          **** GX
+    _P1_REG                            **** GX
+    _RP_REG                            **** GX
+    _SB_REG                            **** GX
+    _SCX_REG                           **** GX
+    _SCY_REG                           **** GX
+    _SC_REG                            **** GX
+    _STAT_REG                          **** GX
+    _SVBK_REG                          **** GX
+    _TAC_REG                           **** GX
+    _TIMA_REG                          **** GX
+    _TMA_REG                           **** GX
+    _VBK_REG                           **** GX
+    _WX_REG                            **** GX
+    _WY_REG                            **** GX
+  9 ___update_end                      000D R
+  9 ___update_start                    0000 R
+    __cpu                              **** GX
+    __io_in                            **** GX
+    __io_out                           **** GX
+    __io_status                        **** GX
+    _checkInput                        **** GX
+    _collisionCheck                    **** GX
+    _sys_time                          **** GX
+  9 _update                            0000 GR
+    _updateSwitches                    **** GX
+    _wait_vbl_done                     **** GX
+
+ASxxxx Assembler V01.75  (GameBoy Z80-like CPU), page 2.
+
+Area Table
+
+   0 _CODE                              size    0   flags 0
+   1 _DATA_1                            size    0   flags 0
+   2 _OVERLAY                           size    0   flags 0
+   3 _ISEG                              size    0   flags 0
+   4 _BSEG                              size    0   flags 0
+   5 _XSEG                              size    0   flags 0
+   6 _GSINIT                            size    0   flags 0
+   7 _GSFINAL                           size    0   flags 0
+   8 _HOME                              size    0   flags 0
+   9 _CODE_1                            size    D   flags 0
