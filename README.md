@@ -21,7 +21,7 @@ I intend to create at least two pieces of software by July 2020:
 These will be kept track of in the [projects section](https://github.com/Narwher/GB-Dev/projects) (soon to be populated)
 
 ## How to build
-First, the [GBDK](http://gbdk.sourceforge.net/) must be downloaded and installed to the host system. Within the **(Project Name)/src** folder is a **build.bat** script that compiles the source into a .gb file (the most common extension for Game Boy binaries). 
+First, the [GBDK](http://gbdk.sourceforge.net/) must be downloaded and installed to the host system. Within the **(Project Name)/src** folder is a **make.bat** script that compiles the source into a .gb file (the most common extension for Game Boy binaries). 
 
 ## How to play
 Game Boy binary files can be played on actual hardware via aftermarket flash memory cartridges. Simply copy the .gb file to an microSD card --> Flash cartridge, select the file and play! 
