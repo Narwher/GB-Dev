@@ -12,10 +12,10 @@ Plus, I just like the Game Boy. It's cumbersome yet built like a tank; homely to
 
 This project will serve two purposes - to make ***frickin' awesome*** homebrew software for the Game Boy, as well as to further my knowledge and application of the C language.
 
-First, I will learn the basics of GB programming. The software in the 'test' folder follows Videlais' [GBDK Tutorial](https://videlais.com/2016/07/03/programming-game-boy-games-using-gbdk-part-1-configuring-programming-and-compiling/). 
+First, I would like to learn the basics of GB programming. The software in the 'test' folder follows Videlais' [GBDK Tutorial](https://videlais.com/2016/07/03/programming-game-boy-games-using-gbdk-part-1-configuring-programming-and-compiling/). 
 
 I intend to create at least two pieces of software by July 2020:
-1. A port - most likely of a simple, roguelike dungeon crawler - most likely one of small size like flends's [zigClimb](http://flend.net/zigclimb/)
+1. A port - most likely of a simple, roguelike dungeon crawler - perhaps one of small size like flends's [zigClimb](http://flend.net/zigclimb/)
 2. An original game of short-medium length. I'm interesting in genres like platforming/adventure. A visual novel is also well within scope.
 
 These will be kept track of in the [projects section](https://github.com/Narwher/GB-Dev/projects) (soon to be populated)
