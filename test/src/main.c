@@ -3,6 +3,7 @@
 #include "sprites.c"
 #include "dungeon.c"
 
+
 void init();
 void checkInput();
 void updateSwitches();
@@ -30,7 +31,7 @@ void init() {
 	DISPLAY_ON;						// Turn on the display
 	set_bkg_data(0, 23, tiles);		// Load 23 tiles into background memory
 	
-	set_bkg_tiles(0,0,20,18,dungeon); 
+	set_bkg_tiles(0,0,20,18, dungeon);	
 	
 	// Load the the 'sprites' tiles into sprite memory
 	set_sprite_data(0, 2, sprites);
@@ -65,29 +66,44 @@ void checkInput() {
 	
 	// UP
 	if (joypad() & J_UP) {
-			
-		player[1]--;
-		
+				
+		if(collisionCheck(player[0], player[1], 8, 8, enemy[0], enemy[1], 8, 8) == 1) {
+			player[1]+=2; 
+		} else {
+			player[1]--;
+		}
 	}
 
 	// DOWN
 	if (joypad() & J_DOWN) {
 			
-		player[1]++;
+		if(collisionCheck(player[0], player[1], 8, 8, enemy[0], enemy[1], 8, 8) == 1) {
+			player[1]-=2; 
+		} else {
+			player[1]++;
+		}
 		
 	}
 
 	// LEFT
 	if (joypad() & J_LEFT) {
 		
-		player[0]--;
+		if(collisionCheck(player[0], player[1], 8, 8, enemy[0], enemy[1], 8, 8) == 1) {
+			player[0]+=2; 
+		} else {
+			player[0]--;
+		}
 		
 	}	
 	
 	// RIGHT
 	if (joypad() & J_RIGHT) {
 		
-		player[0]++;
+		if(collisionCheck(player[0], player[1], 8, 8, enemy[0], enemy[1], 8, 8) == 1) {
+			player[0]-=2; 
+		} else {
+			player[0]++;
+		} 
 		
 	}
 	
@@ -103,7 +119,7 @@ void checkInput() {
 	if(collisionCheck(player[0], player[1], 8, 8, enemy[0], enemy[1], 8, 8) == 1) {
 		set_sprite_tile(0,1);
 	} else {
-		set_sprite_tile(0,0);
+		set_sprite_tile(1,0);
 	}
 	
 
